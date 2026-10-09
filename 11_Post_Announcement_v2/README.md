@@ -69,8 +69,8 @@ EV EUR 1.2bn less net cash proceeds EUR 0.9bn is EUR 0.3bn (25%), which the rele
 
 ## Limitations
 
-- **Single chain of attribution for the financials.** Revenue and EBITDA are not in AkzoNobel's release. Four media outlets report them (three explicitly attribute them to Nippon Paint's statement; PCI Magazine does not state a basis). The primary Nippon Paint release was not read. Labelled REPORTED, not PUBLIC FACT.
-- **2026 projection is single-source** (PCI Magazine; revenue "above ~USD 330m" uses the floor). It is the buyer's view.
+- **Financials are reported, not in AkzoNobel's release.** FY2024 and FY2025 revenue and EBITDA are reported by several outlets, attributed to Nippon Paint; the primary Nippon Paint release was not read; not in AkzoNobel's release. (Investing.com and Yahoo Finance UK attribute them to Nippon Paint; Yahoo Finance Singapore gives them without a named source.) Labelled REPORTED, not PUBLIC FACT.
+- **2026 projection is single-source** (PCI Magazine; not found in five other outlets checked (SRC-041 to SRC-043, pulse2.com, briefs.co); revenue "above ~USD 330m" uses the floor). It is the buyer's view.
 - **Country split and country risk premiums are illustrative.** The split rescales the September four-country split and adds Australia 8%, Singapore 5% and Papua New Guinea 2%. The risk-premium tiers are an analyst ordering, not a published table. Sensitivity: weighting the seven countries equally moves WACC by −0.02pp.
 - **Comps are dated 2026-09-18** and were not refreshed. Beta 0.821 is unchanged.
 - Gross margin, D&A, capex, working capital and separation cost are the September illustrative inputs.

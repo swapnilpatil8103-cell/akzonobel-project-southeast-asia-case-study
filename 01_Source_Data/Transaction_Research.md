@@ -135,11 +135,11 @@ On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative 
 | Countries | Vietnam, Indonesia, Malaysia, Thailand, Singapore, Papua New Guinea, Australia (seven) | SRC-037; SRC-038; SRC-040 | PUBLIC FACT — supersedes the four-country footprint in section E |
 | Retained by AkzoNobel | Coatings activities; Global Business Services | SRC-037 | PUBLIC FACT |
 | Enterprise value | About USD 1.35bn (EUR 1.20bn) | SRC-037; SRC-038; SRC-039; SRC-040 | PUBLIC FACT |
-| Multiple | 21x FY2025 EBITDA; about 16x 2026 projected EBITDA per Nippon Paint's investor presentation | SRC-037 (21x); SRC-039 (16x) | PUBLIC FACT (21x); single-source (16x) |
+| Multiple | 21x FY2025 EBITDA; about 16x 2026 projected EBITDA per Nippon Paint's investor presentation | SRC-037 (21x); SRC-039 (16x) | PUBLIC FACT (21x); REPORTED (16x), also in SRC-041 and SRC-043 attributed to Nippon Paint |
 | Net cash proceeds | About USD 1.0bn (EUR 0.9bn) after taxes and minority partners | SRC-037; SRC-038 | PUBLIC FACT |
 | Closing | Indonesia late 2026; remaining transactions mid-2027; regulatory approvals and other customary conditions | SRC-037; SRC-039 | PUBLIC FACT |
-| FY2025 revenue | About USD 291m (FY2024: USD 299m) | SRC-039 only | REPORTED — single trade-press source; not in AkzoNobel's release or the other outlets checked |
-| FY2025 EBITDA | About USD 65m, 22% margin (FY2024: USD 69m, 23%) | SRC-039 only | REPORTED — single source; consistent with 21x on USD 1.35bn |
+| FY2025 revenue | About USD 291m (FY2024: USD 299m) | SRC-039; SRC-041 to SRC-043 | REPORTED — reported by several outlets, attributed to Nippon Paint; primary Nippon Paint release not read; not in AkzoNobel's release |
+| FY2025 EBITDA | About USD 65m, 22% margin (FY2024: USD 69m, 23%) | SRC-039; SRC-041 to SRC-043 | REPORTED — reported by several outlets, attributed to Nippon Paint; primary release not read; not in AkzoNobel's release; consistent with 21x on USD 1.35bn |
 | Nippon Paint 2026 projection | Revenue above ~USD 330m; EBITDA margin ~26% | SRC-039 only | REPORTED — single source; buyer's projection |
 | Adviser | Not stated in the sources checked | — | UNAVAILABLE — Goldman Sachs remains a report from SRC-001 |
 | SCG | Not mentioned in the coverage checked | — | Not confirmed as a participant or non-participant |

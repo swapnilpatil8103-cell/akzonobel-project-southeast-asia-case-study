@@ -20,12 +20,12 @@ On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative 
 | Headline multiple | 21x FY2025 EBITDA (AkzoNobel). About 16x projected 2026 EBITDA (Nippon Paint investor presentation, as reported) | Tier 1 / Tier 2 |
 | Net cash proceeds | About USD 1.0bn (EUR 0.9bn) after taxes and minority partners | Tier 1 |
 | Closing | Indonesia expected late 2026; remaining transactions mid-2027, subject to regulatory approvals and carve-out work | Tier 1 / Tier 2 |
-| Revenue | USD 299m (FY2024), USD 291m (FY2025) | **Tier 2, single source** (SRC-039) |
-| EBITDA | USD 69m (FY2024), USD 65m (FY2025); margins 23% and 22% | **Tier 2, single source** (SRC-039); the FY2025 figure is consistent with 21x on USD 1.35bn |
+| Revenue | USD 299m (FY2024), USD 291m (FY2025) | **REPORTED, several outlets** (SRC-039; SRC-041 to SRC-043); attributed to Nippon Paint; primary release not read |
+| EBITDA | USD 69m (FY2024), USD 65m (FY2025); margins 23% and 22% | **REPORTED, several outlets** (SRC-039; SRC-041 to SRC-043); attributed to Nippon Paint; primary release not read; the FY2025 figure is consistent with 21x on USD 1.35bn |
 | Nippon Paint 2026 projection | Revenue above ~USD 330m, EBITDA margin ~26% | **Tier 2, single source** (SRC-039) |
 | Brand / sites | Dulux described as the core brand; three production sites and an R&D centre are mentioned in connection with Malaysia (wording ambiguous) | **Tier 2, single source** (SRC-039) |
 
-AkzoNobel's own release and its SEC filing do not state revenue or EBITDA amounts. They give the EV, the 21x multiple, the net proceeds, the perimeter and the timing. The revenue and EBITDA rows above come from one trade article and were **not** found in the two other outlets checked (SRC-040). Treat them as reported, not confirmed. The FY2025 EBITDA of about USD 65m does reconcile arithmetically with the company's stated 21x on USD 1.35bn, which supports that figure; nothing independent supports the revenue figure.
+AkzoNobel's own release and its SEC filing do not state revenue or EBITDA amounts. They give the EV, the 21x multiple, the net proceeds, the perimeter and the timing. The revenue and EBITDA rows above were first found in one trade article (SRC-039) and not in the two outlets then checked (SRC-040). A later search (2026-10-09) found them in three more outlets (SRC-041 to SRC-043): Investing.com and Yahoo Finance UK attribute them to Nippon Paint without saying whether this came from a press release; Yahoo Finance Singapore gives them without naming a source. The primary Nippon Paint release was not read, so treat them as reported, not confirmed. The FY2025 EBITDA of about USD 65m does reconcile arithmetically with the company's stated 21x on USD 1.35bn, which supports that figure; nothing independent supports the revenue figure.
 
 FX: the release implies USD 1.125 per EUR (1.35 / 1.20). EUR figures below use that rate.
 
@@ -85,7 +85,7 @@ Observations, labelled as analysis and not as established fact:
 
 ## 6. Caveats
 
-- Revenue, EBITDA, margins, the 2026 projection, the signing date and the brand and plant details are from a single trade article (SRC-039) and not independently confirmed.
+- FY2024 and FY2025 revenue and EBITDA are reported by several outlets, attributed to Nippon Paint; the primary Nippon Paint release was not read; they are not in AkzoNobel's release. The 2026 projection (revenue above ~USD 330m, ~26% margin), the signing date and the brand and plant details are from a single trade article (SRC-039); the projection was not found in five other outlets checked (SRC-041 to SRC-043, pulse2.com and briefs.co, which are not in the source log).
 - All web content was read through an AI page-fetch tool that summarises pages, not a verbatim read. The EV, multiple, proceeds, perimeter and timing were identical across the AkzoNobel release, the SEC filing and the trade article, which supports them.
 - The back-test applies September multiples, from a 2026-09-18 data pull, to reported FY2025 figures. It is an after-the-fact check, not a re-valuation, and the deal price includes buyer-specific synergies that comps do not capture.
 - No price or financial figure from a confidential process is claimed anywhere in this project.
