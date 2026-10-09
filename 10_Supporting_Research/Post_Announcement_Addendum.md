@@ -77,9 +77,11 @@ Observations, labelled as analysis and not as established fact:
 
 ## 5. What has and has not been updated
 
-**Updated (2026-10-09):** this addendum; `README.md` (status note, background, perimeter and limitations); `FINAL_REVIEW.md` (post-announcement reassessment); `01_Source_Data/Transaction_Research.md` (update section); `10_Supporting_Research/Support_Sources.xlsx` (SRC-037 to SRC-040); `10_Supporting_Research/Quality_Control_Review.md` (Addendum F); pitch deck (corrected process, perimeter and timeline wording, plus an update slide).
+**Updated (2026-10-09):** this addendum; `README.md` (status note, background, perimeter and limitations); `FINAL_REVIEW.md` (post-announcement reassessment); `01_Source_Data/Transaction_Research.md` (update section); `10_Supporting_Research/Support_Sources.xlsx` (SRC-037 to SRC-046); `10_Supporting_Research/Quality_Control_Review.md` (Addendum F); pitch deck (corrected process, perimeter and timeline wording, plus an update slide).
 
-**Not updated:** the financial model, valuation, trading comps, precedents and buyer analysis workbooks, which still describe the four-country, September view; the Information Memorandum PDF, which still describes a live process and a four-country perimeter; the deck's valuation, synergy and marketing-strategy slides, which remain the September analysis. A full refresh would rebuild the model on the seven-country perimeter, the reported FY2025 revenue and EBITDA, and the announced EV.
+**Now also available as v2 (2026-10-09):** `11_Post_Announcement_v2/` holds a seven-country financial model (three cases, reverse DCF) and a valuation workbook (comps, precedents, triangulation, deal check) built on the reported FY2025 figures, with the announced EV used only as a check. See its README for results and limitations. The September workbooks in folders 02–06 are unchanged and remain the pre-announcement record.
+
+**Still not refreshed:** the Information Memorandum PDF, which still describes a live process and a four-country perimeter; the pitch deck's valuation, synergy and marketing-strategy slides, which remain the September analysis; the buyer-analysis workbook (06).
 
 ## 6. Caveats
 
