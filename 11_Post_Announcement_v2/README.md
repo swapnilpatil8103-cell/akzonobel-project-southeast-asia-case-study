@@ -12,6 +12,10 @@ The September workbooks in folders 01–10 are **unchanged** and remain the pre-
 |---|---|
 | `Project_Southeast_Asia_v2_Financial_Model.xlsx` | Seven-country model: Assumptions (with a case selector), Case_Drivers, Revenue_Build, Working_Capital, Capex_DA, Carveout_PnL, DCF_Valuation (active case), Cases (all three cases side by side, with an integrity check), Sources |
 | `Project_Southeast_Asia_v2_Valuation.xlsx` | Comps, Precedents, Implied_Valuation, Triangulation, Deal_Check |
+| `Project_Southeast_Asia_v2_Buyer_Analysis.xlsx` | The September buyer workbook (columns and sheets unchanged) plus an Outcome layer (Buyer_Fit_Matrix columns F-G, Outcome_Summary) and Synergy_v2 (Nippon Paint synergies on reported FY2025 revenue; synergies needed to justify the price) |
+| `Project_Southeast_Asia_v2_Transaction_Review.pptx` / `.pdf` | 14-slide transaction review deck (not a marketing deck) |
+| `Project_Southeast_Asia_v2_Transaction_Review_Memo.pdf` | 4-page memo summarising the v2 findings |
+| `Project_Southeast_Asia_v2_Information_Memorandum_with_Status_Notice.pdf` | Copy of the September Information Memorandum with a one-page status notice prepended; the original is untouched |
 
 **Link choice.** The Valuation workbook holds *pasted values* (red font) copied from the model, each labelled with its source cell, not live external links. Script-built external links make Excel prompt to update and break if the folder moves. A scripted check confirmed every pasted value equals its model cell. After any model change, rebuild the valuation workbook.
 
@@ -63,6 +67,14 @@ Weights (fixed first): DCF 40% (Base 25, Buyer 7.5, Downside 7.5), comps EV/EBIT
 
 For comparison, the reported FY2025 margin is 22.3%, Nippon Paint's 2026 projection is about 26%, and the model's terminal growth is 3.0%. Reaching the announced price on stand-alone cash flows needs a margin 9–16 points above reported, or perpetual growth of 5–6%. The remaining gap is most plausibly buyer-specific synergies and strategic value that a seller-side standalone DCF does not capture, a lower discount rate than 8.8%, or a better business than the reported numbers show. This analysis cannot tell these apart.
 
+## Synergies needed to justify the price (ILLUSTRATIVE)
+
+The announced EV exceeds the standalone DCF by EUR 487m (Base, 41% of price) and EUR 346m (Buyer case, 29%). Closing that gap with run-rate cost savings alone, capitalised after tax at WACC 8.82% and growth 3.0% with a one-off integration cost of 1.0x the saving, would need about **EUR 38.6m a year (Base; 14.9% of FY2025 revenue)** or **EUR 27.5m (Buyer case; 10.6%)**. September's heuristic applied to FY2025 revenue gives EUR 5.2m to 10.3m of cost savings; one outlet (SRC-048, attribution not stated) reports savings in the high single digits as a percentage of sales (about EUR 18m to 23m at 7% to 9%). This cannot separate synergies from a lower discount rate, a better business than reported, or strategic value.
+
+## Buyer outcome
+
+Nippon Paint is the buyer (PUBLIC FACT). SCG is not mentioned in the coverage checked (which does not show whether it bid); there is no evidence either way for Kansai Paint, Asian Paints / Berger, Sherwin-Williams or PPG. No bidder list is public.
+
 ## EV versus what AkzoNobel keeps
 
 EV EUR 1.2bn less net cash proceeds EUR 0.9bn is EUR 0.3bn (25%), which the release attributes to taxes and payments to minority partners. It is **not** an equity value: the perimeter's net debt and minority interests are not disclosed.
@@ -70,12 +82,12 @@ EV EUR 1.2bn less net cash proceeds EUR 0.9bn is EUR 0.3bn (25%), which the rele
 ## Limitations
 
 - **Financials are reported, not in AkzoNobel's release.** FY2024 and FY2025 revenue and EBITDA are reported by several outlets, attributed to Nippon Paint; the primary Nippon Paint release was not read; not in AkzoNobel's release. (Investing.com and Yahoo Finance UK attribute them to Nippon Paint; Yahoo Finance Singapore gives them without a named source.) Labelled REPORTED, not PUBLIC FACT.
-- **2026 projection is single-source** (PCI Magazine; not found in five other outlets checked (SRC-041 to SRC-043, pulse2.com, briefs.co); revenue "above ~USD 330m" uses the floor). It is the buyer's view.
+- **2026 projection is single-source** (PCI Magazine; not found in five other outlets checked (SRC-041 to SRC-043, SRC-047, SRC-048); revenue "above ~USD 330m" uses the floor). It is the buyer's view.
 - **Country split and country risk premiums are illustrative.** The split rescales the September four-country split and adds Australia 8%, Singapore 5% and Papua New Guinea 2%. The risk-premium tiers are an analyst ordering, not a published table. Sensitivity: weighting the seven countries equally moves WACC by −0.02pp.
 - **Comps are dated 2026-09-18** and were not refreshed. Beta 0.821 is unchanged.
 - Gross margin, D&A, capex, working capital and separation cost are the September illustrative inputs.
 - Whether the reported margin is on a standalone basis is unknown.
-- **Not refreshed:** the Information Memorandum and the pitch deck's valuation, synergy and marketing slides still show the September analysis.
+- **Not refreshed:** `07_Pitch_Deck/` and the September Information Memorandum remain the September record (the memorandum has a status-notice copy here; the transaction review deck replaces the pitch deck's post-announcement role). The synergy-needed block, integration-cost multiple and full-run-rate timing are illustrative.
 
 ## Verification performed
 

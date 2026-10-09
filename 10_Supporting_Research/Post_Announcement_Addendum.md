@@ -77,15 +77,17 @@ Observations, labelled as analysis and not as established fact:
 
 ## 5. What has and has not been updated
 
-**Updated (2026-10-09):** this addendum; `README.md` (status note, background, perimeter and limitations); `FINAL_REVIEW.md` (post-announcement reassessment); `01_Source_Data/Transaction_Research.md` (update section); `10_Supporting_Research/Support_Sources.xlsx` (SRC-037 to SRC-046); `10_Supporting_Research/Quality_Control_Review.md` (Addendum F); pitch deck (corrected process, perimeter and timeline wording, plus an update slide).
+**Updated (2026-10-09):** this addendum; `README.md` (status note, background, perimeter and limitations); `FINAL_REVIEW.md` (post-announcement reassessment); `01_Source_Data/Transaction_Research.md` (update section); `10_Supporting_Research/Support_Sources.xlsx` (SRC-037 to SRC-048); `10_Supporting_Research/Quality_Control_Review.md` (Addendum F); pitch deck (corrected process, perimeter and timeline wording, plus an update slide).
 
 **Now also available as v2 (2026-10-09):** `11_Post_Announcement_v2/` holds a seven-country financial model (three cases, reverse DCF) and a valuation workbook (comps, precedents, triangulation, deal check) built on the reported FY2025 figures, with the announced EV used only as a check. See its README for results and limitations. The September workbooks in folders 02–06 are unchanged and remain the pre-announcement record.
 
-**Still not refreshed:** the Information Memorandum PDF, which still describes a live process and a four-country perimeter; the pitch deck's valuation, synergy and marketing-strategy slides, which remain the September analysis; the buyer-analysis workbook (06).
+**Also refreshed (2026-10-09, in `11_Post_Announcement_v2/`):** a v2 buyer-analysis workbook (September content unchanged, plus an outcome layer and a synergies-needed block); a 14-slide transaction review deck and a 4-page review memo; and a copy of the Information Memorandum with a status notice prepended.
+
+**Still not refreshed (by design):** `07_Pitch_Deck/` and the original Information Memorandum, which remain the September record of a process presumed live; the transaction review deck and memo replace their post-announcement role. The IM was not rebuilt as a marketing document, because a sell-side IM presupposes a live process.
 
 ## 6. Caveats
 
-- FY2024 and FY2025 revenue and EBITDA are reported by several outlets, attributed to Nippon Paint; the primary Nippon Paint release was not read; they are not in AkzoNobel's release. The 2026 projection (revenue above ~USD 330m, ~26% margin), the signing date and the brand and plant details are from a single trade article (SRC-039); the projection was not found in five other outlets checked (SRC-041 to SRC-043, pulse2.com and briefs.co, which are not in the source log).
+- FY2024 and FY2025 revenue and EBITDA are reported by several outlets, attributed to Nippon Paint; the primary Nippon Paint release was not read; they are not in AkzoNobel's release. The signing date (3 Oct) is in two outlets (SRC-039, SRC-047). The 2026 projection (revenue above ~USD 330m, ~26% margin) and the brand and plant details are from a single trade article (SRC-039); the projection was not found in five other outlets checked (SRC-041 to SRC-043, SRC-047 and SRC-048).
 - All web content was read through an AI page-fetch tool that summarises pages, not a verbatim read. The EV, multiple, proceeds, perimeter and timing were identical across the AkzoNobel release, the SEC filing and the trade article, which supports them.
 - The back-test applies September multiples, from a 2026-09-18 data pull, to reported FY2025 figures. It is an after-the-fact check, not a re-valuation, and the deal price includes buyer-specific synergies that comps do not capture.
 - No price or financial figure from a confidential process is claimed anywhere in this project.

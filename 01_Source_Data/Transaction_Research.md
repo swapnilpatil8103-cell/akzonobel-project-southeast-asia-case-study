@@ -131,7 +131,7 @@ On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative 
 |---|---|---|---|
 | Buyer | Nippon Paint | AkzoNobel media release (SRC-037); SEC Form 6-K (SRC-038) | PUBLIC FACT |
 | Announcement date | 5 October 2026 | SRC-037 | PUBLIC FACT |
-| Signing date | 3 October 2026 | PCI Magazine (SRC-039) | PUBLIC FACT (single trade-press source) |
+| Signing date | 3 October 2026 | PCI Magazine (SRC-039); Pulse 2.0 (SRC-047) | REPORTED (two outlets; not in AkzoNobel's release) |
 | Countries | Vietnam, Indonesia, Malaysia, Thailand, Singapore, Papua New Guinea, Australia (seven) | SRC-037; SRC-038; SRC-040 | PUBLIC FACT — supersedes the four-country footprint in section E |
 | Retained by AkzoNobel | Coatings activities; Global Business Services | SRC-037 | PUBLIC FACT |
 | Enterprise value | About USD 1.35bn (EUR 1.20bn) | SRC-037; SRC-038; SRC-039; SRC-040 | PUBLIC FACT |

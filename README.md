@@ -3,7 +3,7 @@
 
 > **Disclaimer:** This project is an independent student analysis/reconstruction based on publicly available information. It is not affiliated with, commissioned by, or representative of Goldman Sachs or AkzoNobel.
 
-> **Status update (2026-10-09):** On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative Paints businesses in South East Asia to Nippon Paint at an enterprise value of about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, across **seven** countries. Everything below was built in September 2026, while the sale was still a reported process, and is kept as that record. The September files have **not** been changed; a seven-country post-announcement refresh of the model and valuation is in [11_Post_Announcement_v2/](11_Post_Announcement_v2/README.md) (v2 DCF EUR 586–854m by case; weighted range EUR 550–1,100m; announced EUR 1.2bn above that range). The announced EV is well above this project's EUR 500–775m recommended range, and the announced perimeter is wider than the four countries modelled. See [10_Supporting_Research/Post_Announcement_Addendum.md](10_Supporting_Research/Post_Announcement_Addendum.md) for the comparison and for which parts of the project are now out of date.
+> **Status update (2026-10-09):** On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative Paints businesses in South East Asia to Nippon Paint at an enterprise value of about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, across **seven** countries. Everything below was built in September 2026, while the sale was still a reported process, and is kept as that record. The September files have **not** been changed; a seven-country post-announcement refresh of the model and valuation is in [11_Post_Announcement_v2/](11_Post_Announcement_v2/README.md) (v2 DCF EUR 586–854m by case; weighted range EUR 550–1,100m; announced EUR 1.2bn above that range), with a v2 buyer analysis, a 14-slide transaction review deck, a status-noticed copy of the Information Memorandum and a 4-page review memo. The announced EV is well above this project's EUR 500–775m recommended range, and the announced perimeter is wider than the four countries modelled. See [10_Supporting_Research/Post_Announcement_Addendum.md](10_Supporting_Research/Post_Announcement_Addendum.md) for the comparison and for which parts of the project are now out of date.
 
 ---
 
@@ -39,7 +39,7 @@ Sources were prioritized in three tiers:
 
 This project had **no access to a licensed market-data terminal** (Bloomberg, Capital IQ, Refinitiv) or a paywalled Mergermarket subscription — the ION Analytics article itself was accessed via an AI-summarized page fetch, not a verbatim read, and is flagged as such in [01_Source_Data/Transaction_Research.md](01_Source_Data/Transaction_Research.md). All other web research was performed via AI-mediated search and page-fetch tools. Several Tier 3 sources showed material cross-source inconsistency (e.g., Sherwin-Williams' and AkzoNobel's own market capitalization varied by 10-20% across aggregators depending on date; Berger Paints India's reported EV/EBITDA was internally inconsistent with its disclosed net income). These are flagged individually at the point of use rather than silently reconciled.
 
-The full source log — 46 sources (SRC-001 to SRC-046), tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
+The full source log — 48 sources (SRC-001 to SRC-048), tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
 
 ## 5. Fact vs. Estimate Methodology
 
@@ -127,8 +127,8 @@ PROJECT-SOUTHEAST-ASIA/
 ├── 07_Pitch_Deck/               19-slide sell-side pitch deck (.pptx and .pdf): 17 September slides plus 2 post-announcement slides
 ├── 08_Information_Memorandum/   information memorandum (.pdf): 22 numbered sections, 24 pages
 ├── 09_Assumptions/              Consolidated assumptions book
-├── 10_Supporting_Research/      Source database (46 sources), QC and banker reviews, post-announcement addendum
-├── 11_Post_Announcement_v2/     Post-announcement v2 financial model and valuation (seven countries, three cases, reverse DCF, deal check)
+├── 10_Supporting_Research/      Source database (48 sources), QC and banker reviews, post-announcement addendum
+├── 11_Post_Announcement_v2/     Post-announcement v2: model, valuation, buyer analysis, transaction review deck and memo, IM status-notice copy
 ├── README.md                    This file
 └── FINAL_REVIEW.md              Senior-banker-style quality review (Phase 15)
 ```
