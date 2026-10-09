@@ -3,6 +3,8 @@
 
 > **Disclaimer:** This project is an independent student analysis/reconstruction based on publicly available information. It is not affiliated with, commissioned by, or representative of Goldman Sachs or AkzoNobel.
 
+> **Status update (2026-10-09):** On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative Paints businesses in South East Asia to Nippon Paint at an enterprise value of about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, across **seven** countries. Everything below was built in September 2026, while the sale was still a reported process, and is kept as that record. It has **not** been re-modelled on the announced deal. The announced EV is well above this project's EUR 500–775m recommended range, and the announced perimeter is wider than the four countries modelled. See [10_Supporting_Research/Post_Announcement_Addendum.md](10_Supporting_Research/Post_Announcement_Addendum.md) for the comparison and for which parts of the project are now out of date.
+
 ---
 
 ## 1. Project Objective
@@ -19,11 +21,13 @@ AkzoNobel N.V. (the Dutch listed paints and coatings manufacturer) has reportedl
 
 **Primary source:** ION Analytics/Mergermarket, "AkzoNobel taps Goldman Sachs for sale of Southeast Asia paints assets" (SRC-001). See [01_Source_Data/Transaction_Research.md](01_Source_Data/Transaction_Research.md) for the full fact table.
 
+**Update (2026-10-09) — what happened next:** The paragraph above describes the process as it was reported in September 2026. On 5 October 2026 AkzoNobel announced binding agreements (signed 3 October, per trade press) to sell its Decorative Paints businesses in **seven** countries — Vietnam, Indonesia, Malaysia, Thailand, Singapore, Papua New Guinea and Australia — to Nippon Paint, as one package with staged closings: Indonesia expected in late 2026 and the rest in mid-2027, subject to regulatory approvals. The announced enterprise value is about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, with about USD 1bn (EUR 0.9bn) of net cash proceeds. AkzoNobel keeps its Coatings activities and Global Business Services. Reported FY2025 revenue and EBITDA for the business (trade-press figures, single source) are about USD 291m and USD 65m. SCG is not mentioned in the announcement coverage checked. Sources: SRC-037 to SRC-040.
+
 ## 3. Scope
 
 The project covers the full sell-side workstream: transaction research, asset perimeter mapping, a carve-out financial model, trading comparables, precedent transactions, valuation triangulation, buyer analysis, a sell-side pitch deck, an information memorandum, an assumptions book, and a source database. It deliberately **does not** attempt to price a specific bid, does not simulate confidential buyer behavior, and does not claim knowledge of any actual Goldman Sachs valuation, buyer list, or process detail.
 
-The modeled perimeter is treated as **Decorative Paints only**, in the four named countries — an analyst inference based on the source article's specific language, not a confirmed transaction scope. Performance Coatings facilities identified in the same countries are treated as outside the perimeter. See [01_Source_Data/SEA_Asset_Perimeter.xlsx](01_Source_Data/SEA_Asset_Perimeter.xlsx) for the full reasoning.
+The modeled perimeter is treated as **Decorative Paints only**, in the four named countries — an analyst inference based on the source article's specific language, not a confirmed transaction scope. Performance Coatings facilities identified in the same countries are treated as outside the perimeter. See [01_Source_Data/SEA_Asset_Perimeter.xlsx](01_Source_Data/SEA_Asset_Perimeter.xlsx) for the full reasoning. **Update (2026-10-09):** the announced perimeter is decorative paints only (the decorative-only inference held), but it covers seven countries, adding Singapore, Papua New Guinea and Australia to the four modelled here. The modelled perimeter and the EUR 300m revenue anchor therefore do not match the deal as announced.
 
 ## 4. Source Methodology
 
@@ -35,7 +39,7 @@ Sources were prioritized in three tiers:
 
 This project had **no access to a licensed market-data terminal** (Bloomberg, Capital IQ, Refinitiv) or a paywalled Mergermarket subscription — the ION Analytics article itself was accessed via an AI-summarized page fetch, not a verbatim read, and is flagged as such in [01_Source_Data/Transaction_Research.md](01_Source_Data/Transaction_Research.md). All other web research was performed via AI-mediated search and page-fetch tools. Several Tier 3 sources showed material cross-source inconsistency (e.g., Sherwin-Williams' and AkzoNobel's own market capitalization varied by 10-20% across aggregators depending on date; Berger Paints India's reported EV/EBITDA was internally inconsistent with its disclosed net income). These are flagged individually at the point of use rather than silently reconciled.
 
-The full source log — 36 sources (SRC-001 to SRC-036), tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
+The full source log — 40 sources (SRC-001 to SRC-040), tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
 
 ## 5. Fact vs. Estimate Methodology
 
@@ -76,6 +80,8 @@ Enterprise Value is triangulated across three methodologies, consolidated in [05
 
 **Data refresh (2026-09-18):** the WACC's beta input and the entire trading comps dataset were originally illustrative/secondary-aggregator placeholders; they were subsequently updated to live market data (Yahoo Finance via yfinance, one consistent pull across all 6 peers), which is what the figures above now reflect. See 09_Assumptions/Support_Assumptions.xlsx and 10_Supporting_Research/Support_Sources.xlsx (SRC-034) for full methodology.
 
+**Post-announcement back-test (2026-10-09):** the announced EV of EUR 1.20bn is 1.55x the top of the recommended range (EUR 775m) and about 1.9x its mid-point (EUR 625m). Applied to the reported FY2025 EBITDA (about USD 65m, single-source), the trading-comps EV/EBITDA range (10.3x–26.2x) brackets the announced price (20.8x), while the DCF sensitivity range, the revenue-based comps and the two revenue-based precedents do not. Details and caveats are in [10_Supporting_Research/Post_Announcement_Addendum.md](10_Supporting_Research/Post_Announcement_Addendum.md). The valuation workbooks themselves are unchanged.
+
 ## 8. Buyer Analysis Methodology
 
 Buyer fit is assessed using an **evidence → strategic implication → potential synergy** structure for each of six named buyers across up to twelve fit categories (geographic, product, distribution, manufacturing, customer, procurement, cross-sell, cost synergy, revenue synergy, financial capacity, transaction complexity, regulatory) — see [06_Buyer_Analysis/Project_Southeast_Asia_Buyer_Analysis.xlsx](06_Buyer_Analysis/Project_Southeast_Asia_Buyer_Analysis.xlsx). No arbitrary numerical buyer scores are used anywhere.
@@ -87,8 +93,9 @@ Buyer-specific synergy sizing (for the two best-evidenced buyers, Nippon Paint a
 - **No SEA-specific financial disclosure exists.** Every dollar figure beyond the EUR 300m revenue anchor and the four statutory tax rates is either calculated or illustrative.
 - **No market-data terminal access.** Trading comps data came from secondary aggregators and showed real cross-source inconsistencies, individually flagged.
 - **Recalculation coverage.** A LibreOffice headless recalculation pass was run on 2026-10-09 (the earlier "no LibreOffice" limitation no longer applies). Only `02_Financial_Model` and `05_Valuation` were saved with stored values; `03_Trading_Comps`, `04_Precedent_Transactions` and `06_Buyer_Analysis` were scanned via recalculated copies and still contain formulas without stored values until they are next opened in Excel or LibreOffice. `05_Valuation/DCF_Summary` links to the model by relative path, so keep the numbered-folder layout; Excel will ask to update links on open.
-- **Malaysia's decorative manufacturing site location was not confirmed** against a primary source in this research pass.
-- **The transaction perimeter is an analyst inference**, not a confirmed fact — whether Performance Coatings assets, shared services, or specific brands transfer with the decorative business is unknown.
+- **Malaysia's decorative manufacturing site location was not confirmed** against a primary source in this research pass. Post-announcement trade coverage mentions a Malaysian plant and R&D centre, but the wording is ambiguous and it is single-source; still to be verified.
+- **The transaction perimeter was an analyst inference** at the time of the build. The announcement confirms decorative paints only but in seven countries, not four; AkzoNobel retains Coatings and Global Business Services. The model and deck analysis still use the four-country perimeter.
+- **The project predates the announced deal.** The model, valuation, comps, buyer analysis and information memorandum have not been re-run on the announced EV, the seven-country perimeter, or the reported FY2025 revenue (about USD 291m) and EBITDA (about USD 65m); the latter are single-source. The model's FY2025 revenue (EUR 300m) and EBITDA (EUR 47.4m) differ materially from these.
 - **Equity Value cannot be calculated** — no public asset-level debt/cash exists for the carve-out.
 - **DCF, trading comps, and precedent transactions do not converge** on a valuation — treated as a genuine finding.
 
@@ -117,10 +124,10 @@ PROJECT-SOUTHEAST-ASIA/
 ├── 04_Precedent_Transactions/   Precedent M&A transactions and implied valuation
 ├── 05_Valuation/                Triangulation, football field, equity bridge
 ├── 06_Buyer_Analysis/           Buyer fit matrix, synergy analysis
-├── 07_Pitch_Deck/               17-slide sell-side pitch deck (.pptx and .pdf)
+├── 07_Pitch_Deck/               19-slide sell-side pitch deck (.pptx and .pdf): 17 September slides plus 2 post-announcement slides
 ├── 08_Information_Memorandum/   information memorandum (.pdf): 22 numbered sections, 24 pages
 ├── 09_Assumptions/              Consolidated assumptions book
-├── 10_Supporting_Research/      Source database (36 sources)
+├── 10_Supporting_Research/      Source database (40 sources), QC and banker reviews, post-announcement addendum
 ├── README.md                    This file
 └── FINAL_REVIEW.md              Senior-banker-style quality review (Phase 15)
 ```

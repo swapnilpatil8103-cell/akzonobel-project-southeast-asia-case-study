@@ -4,6 +4,8 @@
 
 This is the closing quality assessment of the project, consolidating the Phase 13 quality-control review and Phase 14 senior-banker review into the twelve items requested. It is a qualitative assessment, not a numerical score.
 
+> **Status update (2026-10-09):** this review assesses the project as built in September 2026, before the sale was announced. Sections 1–12 are unchanged. Section 13 below records what the 5 October 2026 announcement changed.
+
 ---
 
 ## 1. What Is Factually Established
@@ -51,7 +53,7 @@ Financial data scarcity; regulatory/antitrust exposure concentrated in a Nippon 
 
 ## 8. Source-Quality Assessment
 
-Of the 36 logged sources (33 from the original research phases plus 3 added 2026-09-18 documenting the live-data API pulls), roughly 5 are Tier 1 (AkzoNobel's own disclosures, government tax data, LEI registry), roughly 9 are Tier 2 (ION Analytics, Coatings World, deal-specific trade press), and roughly 22 are Tier 3 (secondary financial aggregators, live market-data feeds, and general trade press) — see 10_Supporting_Research/Support_Sources.xlsx. This project had no market-data terminal access, and several Tier 3 sources showed real cross-source inconsistency (Sherwin-Williams' and AkzoNobel's own market caps varied materially by source/date; Berger Paints' reported EV/EBITDA was internally inconsistent with its own disclosed net income). Every such inconsistency was flagged individually at the point of use rather than silently averaged or picked without comment. The primary source itself (ION Analytics) was accessed via an AI-summarized page fetch of a paywalled article, not a verbatim read — disclosed explicitly in 01_Source_Data/Transaction_Research.md from Phase 1 onward.
+Of the 40 logged sources (33 from the original research phases, 3 added 2026-09-18 documenting the live-data API pulls, and 4 added 2026-10-09 documenting the announced sale), roughly 7 are Tier 1 (AkzoNobel's own disclosures, its SEC filing, government tax data, LEI registry), roughly 11 are Tier 2 (ION Analytics, Coatings World, deal-specific trade press), and roughly 22 are Tier 3 (secondary financial aggregators, live market-data feeds, and general trade press) — see 10_Supporting_Research/Support_Sources.xlsx. This project had no market-data terminal access, and several Tier 3 sources showed real cross-source inconsistency (Sherwin-Williams' and AkzoNobel's own market caps varied materially by source/date; Berger Paints' reported EV/EBITDA was internally inconsistent with its own disclosed net income). Every such inconsistency was flagged individually at the point of use rather than silently averaged or picked without comment. The primary source itself (ION Analytics) was accessed via an AI-summarized page fetch of a paywalled article, not a verbatim read — disclosed explicitly in 01_Source_Data/Transaction_Research.md from Phase 1 onward.
 
 ## 9. Model-Integrity Assessment
 
@@ -59,7 +61,7 @@ Of the 36 logged sources (33 from the original research phases plus 3 added 2026
 
 ## 10. Presentation-Quality Assessment
 
-The pitch deck (17 slides, structurally validated, content-QA'd) and Information Memorandum (24 pages with 22 numbered sections, native PDF, text-verified) both follow conclusion-oriented headlines, disclosed sourcing on every slide/section, and — where data doesn't exist — say so explicitly (e.g., the IM's Customers, Distribution and Management sections) rather than padding with invented operating detail. The one open item is that neither document received a visual/rendered QA pass (no LibreOffice for slide-image rendering; the IM's reportlab-based table layout was verified only via column-width math and text extraction, not a rendered image) — disclosed in both phases' delivery messages rather than claimed as complete.
+The pitch deck (17 slides at the time of this review, since extended to 19 with two post-announcement slides; structurally validated, content-QA'd) and Information Memorandum (24 pages with 22 numbered sections, native PDF, text-verified) both follow conclusion-oriented headlines, disclosed sourcing on every slide/section, and — where data doesn't exist — say so explicitly (e.g., the IM's Customers, Distribution and Management sections) rather than padding with invented operating detail. The one open item is that neither document received a visual/rendered QA pass (no LibreOffice for slide-image rendering; the IM's reportlab-based table layout was verified only via column-width math and text extraction, not a rendered image) — disclosed in both phases' delivery messages rather than claimed as complete.
 
 ## 11. Questions an IB Associate / VP Would Challenge
 
@@ -77,3 +79,31 @@ Before this project could inform any real decision (which it is not intended to,
 - Open `03_Trading_Comps`, `04_Precedent_Transactions` and `06_Buyer_Analysis` once in Excel or LibreOffice and save, so they carry stored values like the model and valuation workbooks now do.
 - If pursued further, size the country-by-country structuring question raised in Section 11 quantitatively rather than qualitatively — specifically, what the achievable buyer universe and price look like if Nippon Paint is excluded from Malaysia/Thailand on regulatory grounds.
 - Seek a second, live pull of the trading comps data from a proper market-data terminal to resolve the cross-source inconsistencies flagged throughout 03_Trading_Comps.
+
+---
+
+## 13. Post-Announcement Reassessment (2026-10-09)
+
+On 5 October 2026 AkzoNobel announced binding agreements to sell its South East Asia decorative paints businesses to Nippon Paint at an enterprise value of about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, across seven countries. This section re-reads Sections 1–12 against that outcome. The full comparison, with figures and caveats, is in `10_Supporting_Research/Post_Announcement_Addendum.md`.
+
+**What the outcome supports**
+- The decorative-only perimeter inference (Section 1) was right.
+- Nippon Paint as the strongest-fit, highest-regulatory-risk buyer (Section 6) was right; the deal carries regulatory-approval closing conditions and a staged closing.
+- The warnings about precision and about the three methods not converging (Section 11) were justified.
+
+**What it contradicts**
+- **Valuation.** The recommended EUR 500–775m range was well below the EUR 1,200m price (the top of the range is 55% below). The DCF sensitivity range (EUR 468–908m) did not reach it either. The September reasoning treated the trading comps as upside context and anchored on the DCF; against this outcome the EV/EBITDA comps range (10.3x–26.2x) was the method that bracketed the price (20.8x on reported FY2025 EBITDA), and the excluded 25x India precedent was closer than the retained revenue-based precedents.
+- **Perimeter.** Seven countries, not four. Singapore, Papua New Guinea and Australia were not modelled.
+- **Financial anchors.** Reported FY2025 revenue of about USD 291m (EUR 259m) is below the EUR 300m anchor; reported EBITDA of about USD 65m (EUR 58m, 22% margin) is above the model's EUR 47.4m (15.8% proxy margin). Both are single-source trade-press figures. The margin proxy was the more consequential error.
+- **Process.** Section 7's "no signing or closing timeline" is out of date: signing came about two to three weeks after the reported NBO date, with Indonesia closing first (late 2026) and the rest in mid-2027. SCG, the one reported participant, is not mentioned in the coverage checked.
+
+**Answers to Section 11's questions, as far as the outcome allows**
+- Range precision: the range understated value, so its precision oversold confidence in the wrong direction as well as the right one.
+- Comps median on a thin sample: moot; the sample was completed on 2026-09-18, and the EV/EBITDA range brackets the deal.
+- Group margin as a SEA proxy: it was too low by about six points on the reported figures.
+- Excluding Nippon from Malaysia/Thailand: not tested; the deal went to Nippon Paint for all seven countries, subject to approvals.
+
+**Improvements required, beyond Section 12**
+- Rebuild the model on the seven-country perimeter, the reported FY2025 revenue and EBITDA, and the announced EV; verify the reported figures against a second source or the buyer's own disclosure.
+- Feed buyer synergies into the valuation instead of sizing them separately, and re-weight the triangulation so that EV/EBITDA evidence is not treated as context only.
+- Refresh the information memorandum, which still describes a live process and a four-country perimeter, and the deck's valuation, synergy and marketing-strategy slides.

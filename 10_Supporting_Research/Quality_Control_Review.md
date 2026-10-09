@@ -90,3 +90,15 @@ This real data was propagated through the model: the WACC beta input (02_Financi
 **Still inconsistent (not changed in this pass).** The old Low / Mid / High ordering for precedents remains in: the Information Memorandum's valuation table (Section 19, "87 / 690 / 578"), `04_Precedent_Transactions/Implied_Valuation` and the matching rows in `09_Assumptions/Support_Assumptions.xlsx`. The precedents workbook also computes 88.2 / 689.9 / 576.5 because it stores its multiples rounded to two decimals, versus the 87 / 690 / 578 typed in `05_Valuation`.
 
 **Cross-document check re-run (26 values).** WACC 8.88%, DCF base EV 613.33 and the recommended range 500 / 625 / 775 are identical in the model, `05_Valuation`, the pitch deck (`.pptx` and `.pdf`), the Information Memorandum and the assumptions book. No stale 9.66%, EUR 539m or 450-700 figures remain in the deck or the IM.
+
+---
+
+## Addendum F. Post-Announcement Update (2026-10-09)
+
+AkzoNobel announced binding agreements on 5 October 2026 to sell its South East Asia decorative paints businesses to Nippon Paint (EV about USD 1.35bn / EUR 1.20bn, 21x FY2025 EBITDA, seven countries). See `Post_Announcement_Addendum.md` in this folder.
+
+**What was checked:** the announced EV, multiple, net proceeds, perimeter and closing timing were identical across AkzoNobel's media release, its SEC Form 6-K and trade-press coverage (SRC-037 to SRC-040). Reported FY2025 revenue (about USD 291m) and EBITDA (about USD 65m) come from one trade article (SRC-039) only; the EBITDA figure reconciles arithmetically with the stated 21x on USD 1.35bn, the revenue figure has no independent support. Every figure in the addendum was recomputed from these inputs at the release-implied USD 1.125 per EUR.
+
+**What was changed:** documentation and the pitch deck only (README, FINAL_REVIEW, Transaction_Research, Support_Sources, this file, the addendum, deck wording and an update slide).
+
+**What was not changed:** no workbook formula or input was edited. The headline figures in Section B and Addendum E (WACC 8.88%, DCF base EUR 613m, recommended range EUR 500/625/775m) are therefore still consistent across the model, valuation workbook, deck and memorandum, and are now known to sit well below the announced price. The Information Memorandum PDF was not rebuilt and still describes a live process and a four-country perimeter.

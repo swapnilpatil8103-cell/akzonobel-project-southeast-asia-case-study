@@ -1,6 +1,6 @@
 # Transaction Research — Project Southeast Asia
 
-**Status:** Phase 1 draft — pending user review before proceeding to Phase 2 (Asset Perimeter).
+**Status:** Phase 1 draft — pending user review before proceeding to Phase 2 (Asset Perimeter). **Updated 2026-10-09:** see the Post-Announcement Update section at the end; sections A–L and the fact table below are the September 2026 record and describe the process as it was reported before the sale was announced.
 
 **Disclaimer:** This project is an independent student analysis/reconstruction based on publicly available information. It is not affiliated with, commissioned by, or representative of Goldman Sachs or AkzoNobel.
 
@@ -120,3 +120,31 @@ Confirmed transaction perimeter (whole-region vs. country-by-country sale), EBIT
 | SRC-002 | Web search corroboration of SRC-001 facts | Multiple (search aggregation) | WebSearch, 2026-09-17 | Corroborates seller, adviser, countries, revenue figure, NBO timing, SCG mention, market size. |
 
 **Note on source reliability:** Because SRC-001 was accessed via an AI summarization tool against a paywalled page rather than a direct read of the full article text, all figures above should be treated as best-effort extraction, not verbatim transcription. If the user has access to the full article (e.g., via a Mergermarket subscription), providing the full text would allow this document to be upgraded to a direct-citation standard.
+
+---
+
+## Post-Announcement Update (2026-10-09)
+
+On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative Paints businesses in South East Asia to Nippon Paint. Items below supersede the "not disclosed" entries in sections I and L and the fact table above. Sections A–L are left unchanged as the September record.
+
+| Item | Information | Source | Classification |
+|---|---|---|---|
+| Buyer | Nippon Paint | AkzoNobel media release (SRC-037); SEC Form 6-K (SRC-038) | PUBLIC FACT |
+| Announcement date | 5 October 2026 | SRC-037 | PUBLIC FACT |
+| Signing date | 3 October 2026 | PCI Magazine (SRC-039) | PUBLIC FACT (single trade-press source) |
+| Countries | Vietnam, Indonesia, Malaysia, Thailand, Singapore, Papua New Guinea, Australia (seven) | SRC-037; SRC-038; SRC-040 | PUBLIC FACT — supersedes the four-country footprint in section E |
+| Retained by AkzoNobel | Coatings activities; Global Business Services | SRC-037 | PUBLIC FACT |
+| Enterprise value | About USD 1.35bn (EUR 1.20bn) | SRC-037; SRC-038; SRC-039; SRC-040 | PUBLIC FACT |
+| Multiple | 21x FY2025 EBITDA; about 16x 2026 projected EBITDA per Nippon Paint's investor presentation | SRC-037 (21x); SRC-039 (16x) | PUBLIC FACT (21x); single-source (16x) |
+| Net cash proceeds | About USD 1.0bn (EUR 0.9bn) after taxes and minority partners | SRC-037; SRC-038 | PUBLIC FACT |
+| Closing | Indonesia late 2026; remaining transactions mid-2027; regulatory approvals and other customary conditions | SRC-037; SRC-039 | PUBLIC FACT |
+| FY2025 revenue | About USD 291m (FY2024: USD 299m) | SRC-039 only | REPORTED — single trade-press source; not in AkzoNobel's release or the other outlets checked |
+| FY2025 EBITDA | About USD 65m, 22% margin (FY2024: USD 69m, 23%) | SRC-039 only | REPORTED — single source; consistent with 21x on USD 1.35bn |
+| Nippon Paint 2026 projection | Revenue above ~USD 330m; EBITDA margin ~26% | SRC-039 only | REPORTED — single source; buyer's projection |
+| Adviser | Not stated in the sources checked | — | UNAVAILABLE — Goldman Sachs remains a report from SRC-001 |
+| SCG | Not mentioned in the coverage checked | — | Not confirmed as a participant or non-participant |
+| Equity value / asset-level debt and cash | Not disclosed; only net proceeds after tax and minorities | — | UNAVAILABLE |
+
+**Revenue anchor note:** the EUR 300m (USD 346m) figure in section F, for four countries, is higher than the reported FY2025 revenue (about USD 291m, about EUR 259m at the release-implied USD 1.125 per EUR) for the seven-country perimeter. The two figures may be on different bases; the reason is not known.
+
+**Sources added:** SRC-037 (AkzoNobel release), SRC-038 (SEC Form 6-K, Exhibit 99.1), SRC-039 (PCI Magazine), SRC-040 (Business Today Malaysia and DealStreetAsia). All were read through an AI page-fetch summary, not verbatim. See `10_Supporting_Research/Post_Announcement_Addendum.md` for the full comparison with the case study.
