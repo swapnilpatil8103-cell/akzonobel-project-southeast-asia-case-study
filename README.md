@@ -1,6 +1,8 @@
 # Project Southeast Asia
 ## Independent Sell-Side M&A Reconstruction — AkzoNobel Southeast Asia Decorative Paints
 
+New here? Start with [HANDOFF.md](HANDOFF.md).
+
 > **Disclaimer:** This project is an independent student analysis/reconstruction based on publicly available information. It is not affiliated with, commissioned by, or representative of Goldman Sachs or AkzoNobel.
 
 > **Status update (2026-10-09):** On 5 October 2026 AkzoNobel announced binding agreements to sell its Decorative Paints businesses in South East Asia to Nippon Paint at an enterprise value of about USD 1.35bn (EUR 1.20bn), 21x FY2025 EBITDA, across **seven** countries. Everything below was built in September 2026, while the sale was still a reported process, and is kept as that record. The September files have **not** been changed; a seven-country post-announcement refresh of the model and valuation is in [11_Post_Announcement_v2/](11_Post_Announcement_v2/README.md) (v2 DCF EUR 586–854m by case; weighted range EUR 550–1,100m; announced EUR 1.2bn above that range), with a v2 buyer analysis, a 14-slide transaction review deck, a status-noticed copy of the Information Memorandum and a 4-page review memo. The announced EV is well above this project's EUR 500–775m recommended range, and the announced perimeter is wider than the four countries modelled. See [10_Supporting_Research/Post_Announcement_Addendum.md](10_Supporting_Research/Post_Announcement_Addendum.md) for the comparison and for which parts of the project are now out of date.
