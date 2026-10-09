@@ -19,7 +19,7 @@ This is the closing quality assessment of the project, consolidating the Phase 1
 - The blended 21.4% effective tax rate (statutory rates weighted by an illustrative country split).
 - WACC (8.88%), built up from a live peer-median beta (0.821, updated 2026-09-18) plus otherwise disclosed-methodology but individually illustrative inputs.
 - Implied EV/Revenue and EV/EBITDA multiples for the Nippon Paint/AkzoNobel offer and the Sherwin-Williams/Suvinil and PPG/AIP precedents, each derived from two independently disclosed figures.
-- Trading comps percentile statistics (median/P25/P75), computed from the 3-4 usable peer data points that survived the "never manufacture a multiple" screen.
+- Trading comps percentile statistics (median/P25/P75), computed from the complete 6-company live peer dataset (Sherwin-Williams, PPG, Nippon Paint, Kansai Paint, Asian Paints, Berger Paints; none excluded).
 
 ## 3. What Is Illustrative
 
@@ -28,7 +28,7 @@ The large majority of the financial model: country revenue split, all forecast g
 ## 4. Biggest Model Limitations
 
 - **No SEA-specific financial statements exist publicly.** Every line beyond the EUR300m revenue anchor and the four tax rates is either calculated or assumed — this is the single largest limitation and is disclosed on the first page of 02_Financial_Model's own README, not buried.
-- **No live formula recalculation was possible** (no LibreOffice on the build machine). Substituted with a full manual formula audit and an independent Python replication of the calculation chain — a reasonable but not equivalent substitute.
+- **Recalculation coverage:** a LibreOffice headless recalculation pass was run on 2026-10-09 (earlier in the project none was possible). It found no error values in any workbook, and it exposed a terminal-value bug in `DCF_Valuation!F10` that the earlier manual audit and Python replication had missed (see `10_Supporting_Research/Quality_Control_Review.md`, Addendum E). Only the model and the valuation workbook were saved with stored values; the other formula workbooks were scanned via recalculated copies.
 - **Malaysia's decorative site is unconfirmed**, and the transaction perimeter itself (decorative-only) is an analyst inference from the source article's wording, not a confirmed scope.
 - **Equity Value cannot be calculated** — no public asset-level debt/cash for the carve-out.
 
@@ -55,16 +55,16 @@ Of the 36 logged sources (33 from the original research phases plus 3 added 2026
 
 ## 9. Model-Integrity Assessment
 
-433 formulas scanned across 8 workbooks in the Phase 13 QC pass; zero genuine defects found (7 initial flags were false positives from the scan's own heuristic, traced and explained). Every workbook follows consistent color-coding (blue input / black formula / green cross-sheet link), and headline figures were confirmed consistent across every document that cites them — the financial model, valuation workbook, buyer analysis, pitch deck and information memorandum all report the same EUR300m anchor, EUR315m FY2026E revenue, 8.88% WACC, and EUR500-775m recommended range (updated 2026-09-18 following the live beta/trading-comps data refresh, and re-verified consistent across every document at that time). The unresolved gap is that no live Excel/LibreOffice recalculation pass was possible on this machine; the manual audit and independent Python replication are a reasonable substitute but a user with Excel access should still do one open-and-recalculate pass before relying on these files for anything beyond this case study.
+433 formulas scanned across 8 workbooks in the Phase 13 QC pass; zero genuine defects found (7 initial flags were false positives from the scan's own heuristic, traced and explained). Every workbook follows consistent color-coding (blue input / black formula / green cross-sheet link), and headline figures were confirmed consistent across every document that cites them — the financial model, valuation workbook, buyer analysis, pitch deck and information memorandum all report the same EUR300m anchor, EUR315m FY2026E revenue, 8.88% WACC, and EUR500-775m recommended range (updated 2026-09-18 following the live beta/trading-comps data refresh, and re-verified consistent across every document at that time). A LibreOffice headless recalculation pass was subsequently run on 2026-10-09 and found no error values; the remaining gap is that three formula workbooks (`03_Trading_Comps`, `04_Precedent_Transactions`, `06_Buyer_Analysis`) were scanned via recalculated copies and have not been saved with stored values.
 
 ## 10. Presentation-Quality Assessment
 
-The pitch deck (17 slides, structurally validated, content-QA'd) and Information Memorandum (24 pages, native PDF, text-verified) both follow conclusion-oriented headlines, disclosed sourcing on every slide/section, and — where data doesn't exist — say so explicitly (e.g., the IM's Customers, Distribution and Management sections) rather than padding with invented operating detail. The one open item is that neither document received a visual/rendered QA pass (no LibreOffice for slide-image rendering; the IM's reportlab-based table layout was verified only via column-width math and text extraction, not a rendered image) — disclosed in both phases' delivery messages rather than claimed as complete.
+The pitch deck (17 slides, structurally validated, content-QA'd) and Information Memorandum (24 pages with 22 numbered sections, native PDF, text-verified) both follow conclusion-oriented headlines, disclosed sourcing on every slide/section, and — where data doesn't exist — say so explicitly (e.g., the IM's Customers, Distribution and Management sections) rather than padding with invented operating detail. The one open item is that neither document received a visual/rendered QA pass (no LibreOffice for slide-image rendering; the IM's reportlab-based table layout was verified only via column-width math and text extraction, not a rendered image) — disclosed in both phases' delivery messages rather than claimed as complete.
 
 ## 11. Questions an IB Associate / VP Would Challenge
 
 - "Your recommended range is an opinion on top of three non-converging methodologies — does the client understand that, or does the precision of 'EUR500-775m' oversell your confidence?"
-- "Your trading comps median is built from 3-4 companies — is 'median' the right word, or does it overstate the robustness of that sample?"
+- "Your trading comps median is built from 6 companies, one of which (Asian Paints, 33.6x EV/EBITDA) is a clear outlier — is the median the right statistic, and is a 6-name sample robust enough to anchor a range?"
 - "You've assumed AkzoNobel's Group Decorative Paints margin applies to SEA specifically — what's your fallback if SEA actually runs materially below or above that, given it's a growth market with different competitive dynamics than AkzoNobel's larger EU/NA decorative business?"
 - "You've flagged Nippon Paint as both your best-fit and highest-regulatory-risk buyer — have you actually sized what a country-by-country carve-out (excluding Nippon Paint from Malaysia/Thailand specifically) does to the achievable buyer universe and price? This project raises the question but does not answer it quantitatively."
 
@@ -74,6 +74,6 @@ Before this project could inform any real decision (which it is not intended to,
 
 - Obtain and directly parse AkzoNobel's FY2025 Annual Report line-by-line (identified as SRC-014 but never fully parsed) to check whether any SEA or "South Asia Pacific" segment note narrows the revenue/margin assumptions used here.
 - Confirm Malaysia's decorative manufacturing site against a primary source.
-- Re-run every workbook through a live Excel/LibreOffice recalculation and a rendered visual QA of the pitch deck and IM, on a machine where those tools are available.
+- Open `03_Trading_Comps`, `04_Precedent_Transactions` and `06_Buyer_Analysis` once in Excel or LibreOffice and save, so they carry stored values like the model and valuation workbooks now do.
 - If pursued further, size the country-by-country structuring question raised in Section 11 quantitatively rather than qualitatively — specifically, what the achievable buyer universe and price look like if Nippon Paint is excluded from Malaysia/Thailand on regulatory grounds.
 - Seek a second, live pull of the trading comps data from a proper market-data terminal to resolve the cross-source inconsistencies flagged throughout 03_Trading_Comps.

@@ -34,6 +34,8 @@ No `#REF!`, circular reference, or broken cross-sheet link was found in any work
 
 ## B. Cross-Document Consistency Check
 
+> **Table updated 2026-10-09** to the current headline figures (WACC 8.88%, DCF base EUR 613m, recommended range EUR 500/625/775m). The original Phase 13 table showed 9.66% / EUR 539m / 450-575-700; those figures were superseded by the 2026-09-18 live-data refresh (Addendum D) and the 2026-10-09 corrections (Addendum E). The ✓ marks above were re-verified on 2026-10-09 by a scripted check of 26 values.
+
 **Method:** The chain ION Article → Transaction Context → Asset Perimeter → Financial Model → Valuation → Buyer Analysis → Pitch Deck → Information Memorandum should tell the same financial story. Headline figures were extracted programmatically from each workbook, the pitch deck (`.pptx`, via markitdown text extraction), and the Information Memorandum (`.pdf`, via pypdf text extraction), and compared.
 
 | Figure | 02_Financial_Model | 03/04_Implied_Valuation | 05_Valuation | 06_Buyer_Analysis | 07_Pitch_Deck | 08_IM | 09_Assumptions |
@@ -41,10 +43,10 @@ No `#REF!`, circular reference, or broken cross-sheet link was found in any work
 | SEA FY2025 revenue anchor | EUR 300m | — | — | — | — | EUR 300.0m ✓ | EUR 300m ✓ |
 | SEA FY2026E revenue | EUR 315m | EUR 315m ✓ | — | EUR 315m ✓ | "EUR315" ✓ | EUR 315.0m ✓ | — |
 | SEA FY2026E EBITDA | EUR 52m | — | — | EUR 52m ✓ | — | — | — |
-| WACC | 9.66% | — | (feeds DCF) | — | 9.66% ✓ | — | 9.66% ✓ |
+| WACC | 8.88% | — | (feeds DCF) | — | 8.88% ✓ | 8.88% ✓ | 8.88% ✓ |
 | Terminal growth | 3.0% | — | (feeds DCF) | — | — | — | 3.0% ✓ |
-| DCF base Enterprise Value | EUR 539m | — | EUR 539m ✓ | — | "539" ✓ | EUR 539m ✓ | — |
-| Recommended EV range (low/mid/high) | — | — | 450/575/700 | — | EUR450-700mm ✓ | 450/575/700 ✓ | 450/575/700 ✓ |
+| DCF base Enterprise Value | EUR 613m (613.33) | — | EUR 613m ✓ (linked) | — | "613" ✓ | EUR 613m ✓ | — |
+| Recommended EV range (low/mid/high) | — | — | 500/625/775 | — | EUR500-775mm ✓ | 500/625/775 ✓ | 500/625/775 ✓ |
 
 **Result: every checked figure is consistent across every document that cites it.** No instance was found of a number changing without explanation between the model, the valuation workbook, the buyer analysis, the pitch deck, or the Information Memorandum.
 
@@ -72,3 +74,19 @@ Following the original Phase 13 QC pass, the user supplied API access to three d
 This real data was propagated through the model: the WACC beta input (02_Financial_Model/Assumptions) was updated from an illustrative flat 1.00 to the live peer-median 0.821, which moved WACC from 9.66% to 8.88% and the DCF base case from EUR539m to EUR613m. The Trading Comps workbook (03_Trading_Comps) was rebuilt entirely on the new dataset. Both changes were then propagated to 05_Valuation (DCF_Summary, Trading_Comps_Summary, Triangulation, Equity_Bridge), the recommended primary range (updated from EUR450/575/700m to EUR500/625/775m), 09_Assumptions/Support_Assumptions.xlsx, 10_Supporting_Research/Support_Sources.xlsx (3 new source entries, SRC-034 to SRC-036), the pitch deck (`.pptx` and `.pdf`, re-validated and visually re-rendered), the Information Memorandum (`.pdf`, re-rendered), and this project's README.md and FINAL_REVIEW.md.
 
 **Re-verification performed:** the same cross-document consistency check as Section B above was re-run for the updated headline figures (WACC 8.88%, DCF base EUR613m, recommended range EUR500/625/775m) across 02_Financial_Model, 05_Valuation, 07_Pitch_Deck (both file formats), and 08_Information_Memorandum — all consistent. Formula audits were re-run on the rebuilt 02_Financial_Model and 05_Valuation workbooks (row-by-row reference checks) with no defects found.
+
+---
+
+## Addendum E. LibreOffice Recalculation Pass and Corrections (2026-10-09)
+
+**Pass performed.** LibreOffice (headless) was used for the first time to recalculate the workbooks and store computed values. `02_Financial_Model` and `05_Valuation` were recalculated in place (348 and 74 formulas, all with stored values). `03_Trading_Comps`, `04_Precedent_Transactions` and `06_Buyer_Analysis` were recalculated as throwaway copies for scanning only, so those three files themselves still hold formulas without stored values. Every workbook was then scanned for `#REF!`, `#DIV/0!`, `#NAME?`, `#VALUE!`, `#N/A`, `#NULL!`, `#NUM!` and `Err:` values: **none found**.
+
+**Defect found and fixed: terminal value used the wrong year.** `02_Financial_Model/DCF_Valuation!F10` is labelled "Terminal Value (Gordon Growth, on FY2030E FCF)" but its formula referenced `E5` (FY2029E FCF, 39.59) instead of `F5` (FY2030E FCF, 42.11). The sensitivity grid beneath it used the correct FY2030E cash flow, so the model contradicted itself. Recalculated, the base-case Enterprise Value (`B15`) was **584.44** against a grid centre of **613.33**; the figure quoted across the project (EUR 613m) had been computed outside the workbook and did not match the workbook's own `B15`. After the fix `B15` = **613.33**, equal to the grid centre to machine precision, and the terminal value's share of EV (`B16`) is 78.7%. No headline figure changed. The earlier Phase 13 audit and the Python replication of the model missed this because the replication used the correct FY2030E cash flow, so it reproduced the grid rather than the cell.
+
+**Valuation workbook linked to the model.** `05_Valuation/DCF_Summary` previously held typed copies of the base-case EV (613), TV share (0.787) and the 25-cell sensitivity grid. They are now live cross-workbook links to `02_Financial_Model/DCF_Valuation` (`B15`, `B16`, `A31:F36`); the grid and the base case can no longer drift from the model. Links use a relative path, so the numbered-folder layout must be kept.
+
+**Precedent range relabelled.** `Precedent_Summary` labelled the three implied EVs Low (PPG/AIP, 87), Mid (SHW/Suvinil, 690) and High (Nippon/AkzoNobel, 578), so the "Mid" exceeded the "High". They are now shown per deal, with a computed Low / Mid / High of **87 / 578 / 690** (min / median / max), the deal at each point looked up by formula, and `Triangulation!B8:D8` pointing at the sorted row. The football-field helper columns (`H16:J20`) still compute (precedent bar 87 to 690, width 603), and the chart survived the LibreOffice round trip.
+
+**Still inconsistent (not changed in this pass).** The old Low / Mid / High ordering for precedents remains in: the Information Memorandum's valuation table (Section 19, "87 / 690 / 578"), `04_Precedent_Transactions/Implied_Valuation` and the matching rows in `09_Assumptions/Support_Assumptions.xlsx`. The precedents workbook also computes 88.2 / 689.9 / 576.5 because it stores its multiples rounded to two decimals, versus the 87 / 690 / 578 typed in `05_Valuation`.
+
+**Cross-document check re-run (26 values).** WACC 8.88%, DCF base EV 613.33 and the recommended range 500 / 625 / 775 are identical in the model, `05_Valuation`, the pitch deck (`.pptx` and `.pdf`), the Information Memorandum and the assumptions book. No stale 9.66%, EUR 539m or 450-700 figures remain in the deck or the IM.

@@ -35,7 +35,7 @@ Sources were prioritized in three tiers:
 
 This project had **no access to a licensed market-data terminal** (Bloomberg, Capital IQ, Refinitiv) or a paywalled Mergermarket subscription — the ION Analytics article itself was accessed via an AI-summarized page fetch, not a verbatim read, and is flagged as such in [01_Source_Data/Transaction_Research.md](01_Source_Data/Transaction_Research.md). All other web research was performed via AI-mediated search and page-fetch tools. Several Tier 3 sources showed material cross-source inconsistency (e.g., Sherwin-Williams' and AkzoNobel's own market capitalization varied by 10-20% across aggregators depending on date; Berger Paints India's reported EV/EBITDA was internally inconsistent with its disclosed net income). These are flagged individually at the point of use rather than silently reconciled.
 
-The full source log — 33 sources, tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
+The full source log — 36 sources (SRC-001 to SRC-036), tier-classified, with the specific fact each supports and where it was used — is at [10_Supporting_Research/Support_Sources.xlsx](10_Supporting_Research/Support_Sources.xlsx).
 
 ## 5. Fact vs. Estimate Methodology
 
@@ -62,7 +62,7 @@ The carve-out financial model ([02_Financial_Model/Project_Southeast_Asia_Financ
 
 Every input beyond the EUR 300m anchor and the four statutory tax rates is an ILLUSTRATIVE ASSUMPTION, documented cell-by-cell in the model's Assumptions tab and consolidated in [09_Assumptions/Support_Assumptions.xlsx](09_Assumptions/Support_Assumptions.xlsx).
 
-**Note on formula verification:** this project was built on a machine without LibreOffice installed, so the xlsx skill's automated `recalc.py` error-check could not be run on any workbook. In its place, every workbook's formulas were manually audited cell-by-cell against a row/column map, and the financial model's full calculation chain was independently replicated in plain Python to confirm the outputs matched. This is disclosed as a real limitation, not glossed over — a user with access to Excel or LibreOffice should do a final open-and-recalculate pass before relying on these files.
+**Note on formula verification:** the workbooks were originally built on a machine without LibreOffice, so for most of the project their formulas were verified by manual cell-by-cell audit and by independently replicating the financial model's calculation chain in plain Python. **On 2026-10-09 a LibreOffice headless recalculation pass was run**: `02_Financial_Model` and `05_Valuation` were recalculated and saved with stored values, and the other workbooks were recalculated as throwaway copies for an error scan. No `#REF!`, `#DIV/0!`, `#NAME?`, `#VALUE!` or other error values were found in any workbook. That pass also exposed a terminal-value formula bug in `DCF_Valuation!F10`, since fixed (see `10_Supporting_Research/Quality_Control_Review.md`, Addendum E).
 
 ## 7. Valuation Methodology
 
@@ -86,7 +86,7 @@ Buyer-specific synergy sizing (for the two best-evidenced buyers, Nippon Paint a
 
 - **No SEA-specific financial disclosure exists.** Every dollar figure beyond the EUR 300m revenue anchor and the four statutory tax rates is either calculated or illustrative.
 - **No market-data terminal access.** Trading comps data came from secondary aggregators and showed real cross-source inconsistencies, individually flagged.
-- **No LibreOffice on the build machine.** Formula verification relied on manual cell-by-cell audit and independent Python replication rather than the xlsx skill's automated recalculation tool; the pitch deck's PDF export and any slide-image visual QA could not be completed for the same reason (the Information Memorandum was built as a native PDF via reportlab specifically to route around this).
+- **Recalculation coverage.** A LibreOffice headless recalculation pass was run on 2026-10-09 (the earlier "no LibreOffice" limitation no longer applies). Only `02_Financial_Model` and `05_Valuation` were saved with stored values; `03_Trading_Comps`, `04_Precedent_Transactions` and `06_Buyer_Analysis` were scanned via recalculated copies and still contain formulas without stored values until they are next opened in Excel or LibreOffice. `05_Valuation/DCF_Summary` links to the model by relative path, so keep the numbered-folder layout; Excel will ask to update links on open.
 - **Malaysia's decorative manufacturing site location was not confirmed** against a primary source in this research pass.
 - **The transaction perimeter is an analyst inference**, not a confirmed fact — whether Performance Coatings assets, shared services, or specific brands transfer with the decorative business is unknown.
 - **Equity Value cannot be calculated** — no public asset-level debt/cash exists for the carve-out.
@@ -117,10 +117,10 @@ PROJECT-SOUTHEAST-ASIA/
 ├── 04_Precedent_Transactions/   Precedent M&A transactions and implied valuation
 ├── 05_Valuation/                Triangulation, football field, equity bridge
 ├── 06_Buyer_Analysis/           Buyer fit matrix, synergy analysis
-├── 07_Pitch_Deck/               17-slide sell-side pitch deck (.pptx)
-├── 08_Information_Memorandum/   22-section information memorandum (.pdf)
+├── 07_Pitch_Deck/               17-slide sell-side pitch deck (.pptx and .pdf)
+├── 08_Information_Memorandum/   information memorandum (.pdf): 22 numbered sections, 24 pages
 ├── 09_Assumptions/              Consolidated assumptions book
-├── 10_Supporting_Research/      Source database (33 sources)
+├── 10_Supporting_Research/      Source database (36 sources)
 ├── README.md                    This file
 └── FINAL_REVIEW.md              Senior-banker-style quality review (Phase 15)
 ```
@@ -129,7 +129,7 @@ PROJECT-SOUTHEAST-ASIA/
 
 All workbooks were built programmatically with `openpyxl` (Python) and are fully formula-driven — reopening any `.xlsx` in Excel or LibreOffice and recalculating will reproduce every output shown in this project from the blue-highlighted input cells. The pitch deck was built with `pptxgenjs` (Node.js) and structurally validated; the Information Memorandum was built directly as a PDF with `reportlab` (Python). Build scripts are not included in the delivered folder structure (per the spec) but follow a consistent pattern: read the assumptions, compute the chain, write formulas (never hardcoded results) with a documented rationale for every blue input cell.
 
-To update any output: change the relevant blue input cell in the source workbook (starting with `02_Financial_Model/Assumptions` for anything valuation-related), recalculate, and propagate any changed headline figures manually into the downstream workbooks (05_Valuation, 06_Buyer_Analysis, 07_Pitch_Deck, 08_Information_Memorandum, 09_Assumptions) — these are not live-linked across separate files.
+To update any output: change the relevant blue input cell in the source workbook (starting with `02_Financial_Model/Assumptions` for anything valuation-related), recalculate, and propagate any changed headline figures manually into the downstream workbooks (05_Valuation, 06_Buyer_Analysis, 07_Pitch_Deck, 08_Information_Memorandum, 09_Assumptions) — with one exception: the DCF figures on `05_Valuation/DCF_Summary` are live links to `02_Financial_Model/DCF_Valuation`. Everything else is typed across files.
 
 ---
 
